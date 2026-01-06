@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Our Platform</title>
+    <style>
+        /* Resetting default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        /* Main Container Styles */
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 600px;
+            padding: 40px;
+            text-align: center;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .container:hover {
+            transform: translateY(-10px);
+        }
+
+        /* Heading Styles */
+        h1 {
+            font-size: 3rem;
+            color: #3f51b5;
+            margin-bottom: 20px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        /* Paragraph/Description Styles */
+        p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        /* Button Styles */
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #3f51b5;
+            color: #fff;
+            font-size: 1.1rem;
+            text-decoration: none;
+            border-radius: 5px;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            width: 200px;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background-color: #5c6bc0;
+            border-color: #3f51b5;
+        }
+
+        .btn:active {
+            background-color: #3949ab;
+            transform: translateY(2px);
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px;
+            }
+
+            .btn {
+                width: 160px;
+                font-size: 1rem;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="intro">
+            <h1>Welcome to Healthcare Chatbot</h1>
+            <p>
+                Our healthcare chatbot offers personalized health guidance, 
+                symptom analysis, diet plans, and precautions. Stay informed and take charge of your health with us today!
+            </p>
+        </div>
+        <div class="buttons">
+            <a href="/sign-up" class="btn">Sign Up</a>
+            <a href="/sign-in" class="btn">Log In</a>
+        </div>
+    </div>
+</body>
+</html>

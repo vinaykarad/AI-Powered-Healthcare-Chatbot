@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Profile</title>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-secondary: #f7f8fc;
+            --bg-primary: #ffffff;
+            --text-primary: #1c1e21;
+            --text-secondary: #606770;
+            --color-primary: #007bff;
+            --color-primary-hover: #0056b3;
+            --color-danger: #dc3545;
+            --color-danger-hover: #c82333;
+            --border-color: #e0e0e0;
+            --input-bg: #f0f2f5;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-family);
+            margin: 0;
+            padding: 20px;
+            background-color: var(--bg-secondary);
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 40px;
+            background-color: var(--bg-primary);
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-color);
+        }
+
+        h1 {
+            color: var(--text-primary);
+            text-align: center;
+            padding-bottom: 20px;
+            margin-top: 0;
+            font-size: 28px;
+            font-weight: 700;
+        }
+        
+        h1 #username {
+            color: var(--color-primary);
+        }
+
+        form {
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        form:last-of-type {
+            margin-bottom: 20px;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        label {
+            font-weight: 600;
+            display: block;
+            margin-bottom: 8px;
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            padding: 12px 16px;
+            width: 100%;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 16px;
+            background-color: var(--bg-secondary);
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        
+        input:focus {
+            outline: none;
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+        }
+
+        /* Add space between inputs in the same form */
+        input + label {
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: var(--color-primary);
+            color: white;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: var(--color-primary-hover);
+        }
+
+        .logout-btn {
+            background-color: var(--color-danger);
+        }
+
+        .logout-btn:hover {
+            background-color: var(--color-danger-hover);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome, <span id="username">User</span>!</h1>
+        <form id="updateUsernameForm">
+            <label for="newUsername">Update Username</label>
+            <input type="text" id="newUsername" name="newUsername" placeholder="Enter new username" required>
+            <button type="submit">Update Username</button>
+        </form>
+        <form id="updatePasswordForm">
+            <label for="currentPassword">Update Password</label>
+            <input type="password" id="currentPassword" name="currentPassword" placeholder="Current Password" required>
+            <label for="newPassword">New Password</label>
+            <input type="password" id="newPassword" name="newPassword" placeholder="New Password" required>
+            <button type="submit">Update Password</button>
+        </form>
+        <button class="logout-btn" onclick="window.location.href='/logout'">Sign Out</button>
+    </div>
+    <script src="/profile.js"></script>
+</body>
+</html>
